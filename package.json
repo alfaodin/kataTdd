@@ -1,0 +1,32 @@
+{
+  "name": "katatdd",
+  "version": "1.0.0",
+  "license": "ISC",
+  "homepage": "https://github.com/j0n4s/kataTdd#readme",
+  "author": "Jonathan Tinajero",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon --exec babel-node app.js",
+    "test": "jest --config ./jest.config.json",
+    "testw": "npm run test -- --watch"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/j0n4s/kataTdd.git"
+  },
+  "dependencies": {
+    "babel-node": "0.0.1-security",
+    "express": "^4.17.1",
+    "mongoose": "^5.12.1",
+    "pow-mongodb-fixtures": "^0.14.0"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.13.10",
+    "@babel/core": "^7.13.10",
+    "@babel/node": "^7.13.10",
+    "@babel/preset-env": "^7.13.10",
+    "jest": "^26.6.3",
+    "nodemon": "^2.0.7"
+  }
+}
