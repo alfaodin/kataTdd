@@ -1,3 +1,3 @@
-export default function () {
-  
+export default function (app) {
+    require('./routes').default(app);
 }

@@ -6,25 +6,9 @@ const app = express();
 const port = 3000
 
 const prepare_app = () => {
-  app.use(function (req, res, next) {
-    next();
-  });
+  app.use(middleware);
 
-  app.get('/users', (req, res, next) => {
-    res.json([{user: 'user1'}]);
-  });
-
-  app.post('/users', (req, res) => {
-    res.json({create: true});
-  });
-
-  app.put('/users', (req, res) => {
-    res.json({update: true});
-  });
-  
-  app.delete('/users', (req, res) => {
-    res.json({update: true});
-  });
+  require('./modules/new_module/load_module').default(app);
 }
 
 const db = mongoose.connection;
